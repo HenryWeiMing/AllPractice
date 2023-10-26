@@ -1,0 +1,40 @@
+{
+  "profiles": {
+    "http": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AppSetting__URL__Npgsql": "Host=localhost:6060;Database=1234;Username=1234;Password=1234;Persist Security Info=True"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "http://localhost:5295"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+      "environmentVariables": {
+        "ASPNETCORE_URLS": "http://+:80",
+        "ASPNETCORE_ENVIRONMENT": "Production",
+        "AppSetting__URL__Npgsql": "Host=host.docker.internal;Port=6060;Database=1234;Username=1234;Password=1234;Persist Security Info=True"
+      },
+      "publishAllPorts": true
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:51928",
+      "sslPort": 0
+    }
+  }
+}
