@@ -16,7 +16,6 @@ namespace AllPractice.Models
         }
         public string GetOrSetTimeCache(IConnectionMultiplexer connectionMultiplexer, string key)
         {
-            var xxx = connectionMultiplexer.GetDatabase().StringGet(key);
             if (!connectionMultiplexer.GetDatabase().StringGet(key).IsNull)
                 return Encoding.UTF8.GetString(connectionMultiplexer.GetDatabase().StringGet(key));
 
